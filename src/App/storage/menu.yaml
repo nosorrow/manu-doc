@@ -1,0 +1,80 @@
+config:
+    name: Конфигурация
+    url: docs/config.html
+    weight: 10
+router:
+    name: Маршрути - Router
+    url: docs/router.html
+    weight: 20
+uriclass:
+    name: URI
+    url: docs/uri.html
+    weight: 25
+urlclass:
+    name: Url генератор
+    url: docs/urlclass.html
+    weight: 30
+url-and-redirects:
+    name: Пренасочване - Redirect
+    url: docs/url-and-redirects.html
+    weight: 40
+views:
+    name: Views
+    url: docs/views.html
+    weight: 50
+middleware:
+    name: Middleware
+    url: docs/middleware.html
+    weight: 60
+request:
+    name: Request
+    url: docs/request.html
+    weight: 70
+sessions:
+    name: Сесии
+    url: docs/sessions.html
+    weight: 80
+validator:
+    name: Валидиране на данни
+    url: docs/validator.html
+    weight: 85
+csrf:
+    name: CSRF защита
+    url: docs/csrf.html
+    weight: 90
+upload:
+    name: Качване на файлове
+    url: docs/upload.html
+    weight: 100
+image-manipulation:
+    name: Редактиране на изображения
+    url: docs/image-manipulation.html
+    weight: 110
+database:
+    name: Бази данни
+    url: docs/database.html
+    weight: 120
+pagination:
+    name: Странициране
+    url: docs/pagination.html
+    weight: 130
+helpers:
+    name: Helpers
+    url: docs/helpers.html
+    weight: 140
+cli:
+    name: Конзола
+    url: docs/cli.html
+    weight: 150
+crypt:
+    name: Криптиране
+    url: docs/crypt.html
+    weight: 160
+i18n-gettext:
+    name: Интернационализация
+    url: docs/i18n-gettext.html
+    weight: 170
+logging:
+    name: Логове
+    url: docs/logging.html
+    weight: 180

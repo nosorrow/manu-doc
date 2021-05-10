@@ -1,0 +1,54 @@
+cli:
+    name: Конзола
+    url: docs/clihtml
+config:
+    name: Конфигурация
+    url: docs/confightml
+crypt:
+    name: Криптиране
+    url: docs/crypthtml
+csrf:
+    name: CSRF защита
+    url: docs/csrfhtml
+database:
+    name: Бази данни
+    url: docs/databasehtml
+helpers:
+    name: Helpers
+    url: docs/helpershtml
+i18n-gettext:
+    name: Интрнационлизация i18n
+    url: docs/i18n-gettexthtml
+image-manipulation:
+    name: Редактиране на изображения
+    url: docs/image-manipulationhtml
+logging:
+    name: Логове
+    url: docs/logginghtml
+pagination:
+    name: Странициране
+    url: docs/paginationhtml
+request:
+    name: Request
+    url: docs/requesthtml
+router:
+    name: Маршрути - Router
+    url: docs/routerhtml
+sessions:
+    name: Сесии
+    url: docs/sessionshtml
+upload:
+    name: Качване на файлове
+    url: docs/uploadhtml
+url-and-redirects:
+    name: Пренасочване - Redirect
+    url: docs/url-and-redirectshtml
+urlclass:
+    name: Url генератор
+    url: docs/urlclasshtml
+validator:
+    name: Валидиране на данни
+    url: docs/validatorhtml
+views:
+    name: Views
+    url: docs/viewshtml
