@@ -1,4 +1,4 @@
----
+﻿---
 title: Валидация на данни
 layout: layout.hbs
 ---
@@ -100,7 +100,6 @@ class MyController extends Controller
 ##### Зареждане на грешките от file uploader във Валидатора
 
 ```php
-
 <?php
 
 namespace App\Controllers;
@@ -182,7 +181,6 @@ class MyController extends Controller
 
 ##### Валидиращите правила могат да бъдат поставени в масив
 
-
 ```php
 <?php
 $fieldRules = [
@@ -215,7 +213,7 @@ $validator->ruleFor($fieldRules);
 
 Подайте масив в метода message($array) :
 
-1 Собствени съобщения за определено поле.
+##### 1. Собствени съобщения за определено поле.
 
 ```php
 <?php
@@ -231,7 +229,7 @@ $messages = [
 $validator->message($messages);
 
 ```
-2 Собствени съобщения за всички полета.
+##### 2. Собствени съобщения за всички полета.
 
 ```php
 <?php
@@ -243,11 +241,12 @@ $messages = [
 $validator->message($messages);
 
 ```
-#### Показване на грешките
+
 Грешките от валидацията се записват в обекта MessageBag 
 и се извикват във View от флаш променливата $errors 
 
 ```php
+
 <?php
     if ($errors->any()) {
         foreach ($errors->all() as $error){
@@ -258,7 +257,14 @@ $validator->message($messages);
 
 ```
 
-###### Всички методи на обекта MessageBag:
+##### Обекта MessageBag:
+
+```php
+<?php
+$errorsMessageBag = Validator::messageBag();
+```
+
+Всички методи на обекта:  
 
 * set()
 * get()
@@ -270,14 +276,6 @@ $validator->message($messages);
 * any()
 * has()
 * toJson()
-
-Може да извикаме навсякъде грешките от обекта MessageBag чрез функцията (helper) 
-<code>errors()</code>
-```php
-<?php
-    echo error()->first('fieldname');
-```
-
 
 ##### пример за html форма:
 
@@ -419,7 +417,7 @@ has_error('field-name') | връща true ако има грешки при ва
 
 ## Правила за валидация
 
-Правило | Съобщение за грашка 
+Правило | Съобщение за грашка
 --- | --- 
 after:date | Полето {label} не e дата след {arg}
 alpha | Полето {label} може да съдържа само латински букви.

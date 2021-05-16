@@ -76,8 +76,7 @@ class MyController extends Controller
 }
 </code></pre>
 <h5 id="зареждане-на-грешките-от-file-uploader-във-валидатора">Зареждане на грешките от file uploader във Валидатора</h5>
-<pre><code class="language-php">
-&lt;?php
+<pre><code class="language-php">&lt;?php
 
 namespace App\Controllers;
 
@@ -168,7 +167,7 @@ $validator-&gt;ruleFor($fieldRules);</code></pre>
 </code></pre>
 <h3 id="собствени-съобщения-за-грешки">Собствени съобщения за грешки</h3>
 <p>Подайте масив в метода message($array) :</p>
-<p>1 Собствени съобщения за определено поле.</p>
+<h5 id="1-собствени-съобщения-за-определено-поле">1. Собствени съобщения за определено поле.</h5>
 <pre><code class="language-php">&lt;?php
 $messages = [
     &#39;user&#39; =&gt;[&#39;required&#39;=&gt;&#39;Въведете потребителско име&#39;],
@@ -181,7 +180,7 @@ $messages = [
 
 $validator-&gt;message($messages);
 </code></pre>
-<p>2 Собствени съобщения за всички полета.</p>
+<h5 id="2-собствени-съобщения-за-всички-полета">2. Собствени съобщения за всички полета.</h5>
 <pre><code class="language-php">&lt;?php
 $messages = [
     &#39;required&#39;=&gt;&#39;Не сте попълнил това поле&#39;,
@@ -190,10 +189,10 @@ $messages = [
 
 $validator-&gt;message($messages);
 </code></pre>
-<h4 id="показване-на-грешките">Показване на грешките</h4>
 <p>Грешките от валидацията се записват в обекта MessageBag 
 и се извикват във View от флаш променливата $errors </p>
-<pre><code class="language-php">&lt;?php
+<pre><code class="language-php">
+&lt;?php
     if ($errors-&gt;any()) {
         foreach ($errors-&gt;all() as $error){
             echo $error;
@@ -201,7 +200,10 @@ $validator-&gt;message($messages);
     }
 ;?&gt;
 </code></pre>
-<h6 id="всички-методи-на-обекта-messagebag">Всички методи на обекта MessageBag:</h6>
+<h5 id="обекта-messagebag">Обекта MessageBag:</h5>
+<pre><code class="language-php">&lt;?php
+$errorsMessageBag = Validator::messageBag();</code></pre>
+<p>Всички методи на обекта:  </p>
 <ul>
 <li>set()</li>
 <li>get()</li>
@@ -214,10 +216,6 @@ $validator-&gt;message($messages);
 <li>has()</li>
 <li>toJson()</li>
 </ul>
-<p>Може да извикаме навсякъде грешките от обекта MessageBag чрез функцията (helper) 
-<code>errors()</code></p>
-<pre><code class="language-php">&lt;?php
-    echo error()-&gt;first(&#39;fieldname&#39;);</code></pre>
 <h5 id="пример-за-html-форма">пример за html форма:</h5>
 <pre><code class="language-php">
 &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo site_url(&#39;store&#39;) ?&gt;&quot;&gt;
